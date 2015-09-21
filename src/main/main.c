@@ -1,9 +1,10 @@
 #include<stdio.h>
-#include"../../include/persion.h"
+
+#include "../../include/person.h"
 int main(void){
 	
-	persionPtr persion = persion_create("小代码","12345678910","xiaodaima2016@163.com");
-	persion_print(persion);
+	personPtr person = person_create("小代码","12345678910","xiaodaima2016@163.com");
+	person_print(person);
 	printf("小代码\nHello World\n");
 	return 0;
 }

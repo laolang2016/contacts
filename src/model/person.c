@@ -3,7 +3,7 @@
 #include<string.h>
 
 
-#include"../../include/persion.h"
+#include "../../include/person.h"
 
 /** @brief 创建一个联系人条目
  * 
@@ -12,8 +12,8 @@
  * @param email 电子邮箱
  * @return
  */
-persionPtr persion_create(char *name, char * phone, char * email){
-	persionPtr persion = (persionPtr)malloc(sizeof(_persion));
+personPtr person_create(char *name, char * phone, char * email){
+	personPtr persion = (personPtr)malloc(sizeof(_person));
 	if( NULL == persion ){
 		puts("persion_create分配内在失败");
 		exit(0);
@@ -33,7 +33,7 @@ persionPtr persion_create(char *name, char * phone, char * email){
  * @retval 0 执行成功
  * @retval 1 执行失败 
  */
-int persion_print( persionPtr persion ){ 
+int person_print( personPtr persion ){ 
 	int res = 0;
 	if( NULL != persion ){
 		printf("%-20s%-20s%-20s\n",persion->name,persion->phone,persion->email);
